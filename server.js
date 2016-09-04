@@ -245,9 +245,9 @@ for(var i = 0; i < queueCount; i++){
 	dbQueue.add(function(){
 		return new Promise(function(resolve, rej){
 			var demo = {"formID": "H1bpq3jFq", "fields": [{"fieldID": "BJ21xK9q", "value": "cash"},{"fieldID": "ryghJxtqc", "value": "cash"},{"fieldID": "rkbhyxtq5", "value": "cash"}]};
-			if(_.difference(forms[demo.formID].fields, _.map(demo.fields, 'fieldID')).length > 0){
-				return resolve();
-			}
+			//if(_.difference(forms[demo.formID].fields, _.map(demo.fields, 'fieldID')).length > 0){
+			//	return resolve();
+			//}
 			var a = JSON.stringify({"forms": forms, "fields": fields, "submissions": submissions}, null, "\t");
 			if(dbQueue.queue.length == 0){
 				console.log("RATE: (per ms)", queueCount / (new Date()-start));
